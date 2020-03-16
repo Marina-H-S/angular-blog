@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/component/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
-import { AdminLayoutComponent } from './anmin/shade/components/admin-layout/admin-layout.component';
-import { CreatePageComponent } from './admine/create-page/create-page.component';
+import { PostComponent } from './shared/component/post/post.component';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +15,7 @@ import { CreatePageComponent } from './admine/create-page/create-page.component'
     MainLayoutComponent,
     HomePageComponent,
     PostPageComponent,
-    AdminLayoutComponent,
-    CreatePageComponent
+    PostComponent
   ],
   imports: [
     BrowserModule,
