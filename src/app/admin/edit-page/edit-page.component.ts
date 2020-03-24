@@ -5,6 +5,7 @@ import { switchMap } from 'rxjs/operators';
 import { Post } from 'src/app/shared/interfaces';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { AlertSrvice } from '../shade/services/alert.service';
 
 @Component({
   selector: 'app-edit-page',
@@ -20,7 +21,9 @@ export class EditPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private postService: PostService) { }
+    private postService: PostService,
+    private alertService: AlertSrvice) { }
+
   ngOnDestroy(): void {
     if (this.uSub) {
         this.uSub.unsubscribe();
@@ -55,6 +58,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
     })
     .subscribe(() => {
       this.submitted = false;
+      this.alertService.success('Post was updeted');
     });
   }
 
