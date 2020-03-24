@@ -7,7 +7,6 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from './shade/services/auth.service';
 import { SharedModule } from '../shared/shared.module';
 import { AuthGaurd } from './shade/services/auth.guard';
 
@@ -40,7 +39,7 @@ import { AuthGaurd } from './shade/services/auth.guard';
       }
     ])],
     exports: [RouterModule],
-    providers: [AuthService, AuthGaurd ]
+    providers: [ AuthGaurd ]
 })
 
 export class AdminModule {
